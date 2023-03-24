@@ -17,7 +17,7 @@ export default function Header(): JSX.Element {
               NavItem2
             </a>
           </li>
-          <li className={styles.navItem}>
+          <li className={`${styles.navItem} ${styles.active}`}>
             <a className={styles.navLink} href='#'>
               NavItem3
             </a>

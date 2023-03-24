@@ -1,0 +1,95 @@
+.pageHero {
+  position: relative;
+  width: 100%;
+  background-image: linear-gradient(111.04deg, #e2e2e2 0.39%, rgba(255, 255, 255, 0) 86.46%);
+  padding-bottom: 73px;
+}
+
+.title {
+  position: relative;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 47px;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 101px;
+  margin: 0;
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 184px;
+    height: 4px;
+    background: #00c368;
+    top: 75px;
+    left: calc(50% - 184px / 2);
+  }
+}
+
+.list {
+  margin: 69px auto 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 1000px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 178px;
+}
+
+.imageWrapper {
+  display: block;
+  width: 600px;
+  height: 286px;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.support,
+.square,
+.support2,
+.square2 {
+  min-width: 426px;
+}
+
+.support,
+.support2 {
+  .itemIcon,
+  .itemText {
+    margin-left: 215px;
+  }
+}
+
+.square,
+.square2 {
+  .itemIcon,
+  .itemText {
+    margin-right: 65px;
+  }
+}
+
+.itemIcon {
+  svg {
+    margin: 0 auto;
+    transition: color 0.15s ease;
+  }
+
+  &:hover svg {
+    color: #00c368;
+  }
+}
+
+.itemText {
+  margin: 0;
+  max-width: 178px;
+  text-align: center;
+}

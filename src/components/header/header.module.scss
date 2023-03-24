@@ -1,0 +1,94 @@
+.header {
+  display: flex;
+  align-items: center;
+  min-height: 160px;
+  padding: 0 84px;
+
+  svg {
+    width: 304px;
+    height: 93px;
+  }
+
+  @media (max-width: 1023px) {
+    padding: 0 46px;
+
+    svg {
+      width: 206px;
+      height: 63px;
+      margin: 0 auto;
+    }
+  }
+}
+
+.nav {
+  margin-left: 3.61vw;
+
+  @media (max-width: 1023px) {
+    display: none;
+  }
+}
+
+.navList {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  height: 32px;
+  border-radius: 8px;
+  transition: background 0.15s ease, box-shadow 0.15s ease, color 0.15s ease;
+  margin-right: 2.82vw;
+
+  &:hover {
+    background: #00c368;
+    box-shadow: 0px 8px 16px rgba(0, 195, 104, 0.4);
+
+    .navLink {
+      color: #ffffff;
+    }
+  }
+}
+
+.active {
+  pointer-events: none;
+  background: #00c368;
+
+  .navLink {
+    color: #ffffff;
+  }
+}
+
+.navLink {
+  font-size: 16px;
+  line-height: 150%;
+  text-decoration: none;
+  color: #a6abbd;
+  padding: 6px 24px;
+}
+
+.button {
+  font: inherit;
+  color: #ffffff;
+  padding: 4px 34px;
+  background: #00c368;
+  transition: box-shadow 0.15s ease;
+  border-radius: 8px;
+  border: none;
+  height: 32px;
+  margin-left: auto;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 8px 16px rgba(0, 195, 104, 0.4);
+  }
+
+  @media (max-width: 1023px) {
+    display: none;
+  }
+}
