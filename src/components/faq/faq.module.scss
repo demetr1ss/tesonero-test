@@ -1,0 +1,7 @@
+.faq {
+  width: 50%;
+}
+
+.title {
+  composes: title from '../reviews/reviews.module.scss';
+}

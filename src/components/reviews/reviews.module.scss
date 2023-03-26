@@ -1,0 +1,113 @@
+.reviews {
+  width: 50%;
+  padding-left: 86px;
+  padding-right: 79px;
+  box-sizing: border-box;
+}
+
+.title {
+  composes: title from '../page-hero/page-hero.module.scss';
+  text-transform: none;
+  padding-top: 125px;
+  padding-bottom: 30px;
+
+  &::before {
+    top: 102px;
+  }
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.item {
+  position: relative;
+  display: flex;
+  width: 50%;
+
+  img {
+    display: block;
+    position: absolute;
+    width: 109px;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+.left {
+  .quote {
+    padding-right: 90px;
+  }
+
+  img {
+    top: -10px;
+    right: 30px;
+  }
+}
+
+.right {
+  .quote {
+    padding-left: 113px;
+  }
+
+  img {
+    top: -10px;
+    left: -10px;
+  }
+}
+
+.big {
+  width: 100%;
+  margin-bottom: 138px;
+
+  img {
+    display: block;
+    width: 217px;
+    height: auto;
+    margin-left: -13px;
+  }
+}
+
+.quote {
+  position: relative;
+}
+
+.big .quote {
+  padding-left: 260px;
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: 40px;
+    height: 27px;
+    background-image: url('../../../public/img/quotes.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 0;
+    left: 204px;
+  }
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 40px;
+    height: 27px;
+    background-image: url('../../../public/img/quotes.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: rotate(180deg);
+    bottom: -9px;
+    right: -22px;
+  }
+}
+
+.reviewText {
+  margin: 0;
+  padding-bottom: 12px;
+}
+
+.reviewAuthor {
+  font-weight: 700;
+}
