@@ -192,10 +192,10 @@ export default function PageHero(): JSX.Element {
         <li className={`${styles.item} ${styles.imageWrapper}`}>
           <img src='./img/hero-img.png' alt='брусника.' width={600} height={390} />
         </li>
-        <li className={`${styles.item} ${styles.avocado}`}>
+        <li className={`${styles.item} ${styles.stability}`}>
           <div className={styles.itemIcon}>
             <svg width='109' height='99' viewBox='0 0 109 99' fill='none' xmlns='http://www.w3.org/2000/svg'>
-              <g filter='url(#filter0_d_1_284)'>
+              <g filter='url(#filter0_d_1_284)'> 
                 <path
                   d='M15.1607 40.329L40.7138 14.7759C46.5717 8.91804 56.0692 8.91804 61.927 14.7759L66.3751 19.2239C72.7391 25.588 72.1152 36.1227 65.2298 42.0046C61.3795 45.2936 57.381 48.849 54.1861 52.0091C50.446 55.7086 46.2117 60.4447 42.3971 64.8965C36.5133 71.7631 25.9905 72.372 19.6345 66.016L15.1607 61.5422C9.30285 55.6844 9.30284 46.1869 15.1607 40.329Z'
                   stroke='currentColor'

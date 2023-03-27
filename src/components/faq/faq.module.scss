@@ -13,7 +13,7 @@
 .description {
   margin: 0;
   text-align: center;
-  margin-bottom: 28px;
+  margin-bottom: 16px;
 }
 
 .questionsList {
@@ -52,13 +52,37 @@
     top: 10px;
     border-radius: 50%;
     background-color: #e7ebf0;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    .stability & {
+      background-image: url('../../../public/img/stability-faq-icon.svg');
+    }
+
+    .led & {
+      background-image: url('../../../public/img/led-faq-icon.svg');
+    }
+
+    .lights & {
+      background-image: url('../../../public/img/lights-faq-icon.svg');
+    }
+
+    .splitter & {
+      background-image: url('../../../public/img/splitter-faq-icon.svg');
+    }
+
+    .power & {
+      background-image: url('../../../public/img/power-faq-icon.svg');
+    }
   }
+
 }
 
 .reply {
   display: none;
   margin: 0;
   line-height: 18px;
+  transition: display 0.15s ease;
 
   .active & {
     display: block;
@@ -70,7 +94,7 @@
   content: '';
   width: 20px;
   height: 11px;
-  right: -28px;
+  right: 0;
   top: 30px;
   border: none;
   padding: 0;
@@ -79,4 +103,14 @@
   background-image: url('../../../public/img/faq-button-icon.svg');
   background-repeat: no-repeat;
   background-position: center;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+
+  .active & {
+    transform: rotate(180deg);
+  }
+
+  &:hover,
+  &:focus-visible {
+    opacity: 0.5;
+  }
 }
