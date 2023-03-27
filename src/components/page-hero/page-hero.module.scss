@@ -2,7 +2,8 @@
   position: relative;
   width: 100%;
   background-image: linear-gradient(111.04deg, #e2e2e2 0.39%, rgba(255, 255, 255, 0) 86.46%);
-  padding-bottom: 97px;
+  padding-bottom: 77px;
+  padding-left: 97px;
 }
 
 .title {
@@ -47,11 +48,25 @@
   display: block;
   width: 600px;
   height: 286px;
+  margin-top: -30px;
+  margin-right: -50px;
 
   img {
     width: 100%;
     height: auto;
   }
+}
+
+.tablet {
+  .itemIcon,
+  .itemText {
+    margin-right: -98px;
+  }
+}
+
+.support,
+.square {
+  margin-bottom: 50px;
 }
 
 .support,
