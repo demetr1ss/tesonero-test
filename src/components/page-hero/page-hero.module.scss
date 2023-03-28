@@ -2,7 +2,39 @@
   position: relative;
   width: 100%;
   background-image: linear-gradient(111.04deg, #e2e2e2 0.39%, rgba(255, 255, 255, 0) 86.46%);
-  padding-bottom: 77px;
+  padding-bottom: 87px;
+
+  @media (max-width: 1199px) {
+    background: none;
+    padding: 0;
+    margin-bottom: 80px;
+  }
+}
+
+.bgGroup1,
+.bgGroup2 {
+  position: absolute;
+  background-repeat: no-repeat;
+
+  @media (max-width: 1199px) {
+    display: none;
+  }
+}
+
+.bgGroup1 {
+  width: 442px;
+  height: 618px;
+  background-image: url('../../../public/img/bg-1.png');
+  left: 0;
+  bottom: 0;
+}
+
+.bgGroup2 {
+  width: 612px;
+  height: 623px;
+  background-image: url('../../../public/img/bg-2.png');
+  right: 0;
+  top: -38px;
 }
 
 .title {
@@ -14,6 +46,7 @@
   text-align: center;
   padding-top: 101px;
   margin: 0;
+  z-index: 1;
 
   &::before {
     position: absolute;
@@ -23,6 +56,18 @@
     background: #00c368;
     top: 75px;
     left: calc(50% - 184px / 2);
+  }
+
+  @media (max-width: 1199px) {
+    font-size: 24px;
+    line-height: 28px;
+    padding-top: 0;
+    margin-bottom: 50px;
+    margin-top: -18px;
+
+    &::before {
+      display: none;
+    }
   }
 }
 
@@ -41,19 +86,23 @@
   flex-direction: column;
   align-items: center;
   width: 178px;
+  z-index: 1;
 }
 
 .imageWrapper {
-  display: block;
   width: 600px;
   height: 286px;
   margin-top: -30px;
   margin-right: -50px;
+}
 
-  img {
-    width: 100%;
-    height: auto;
-  }
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+  margin: 0 auto;
+  z-index: 1;
 }
 
 .tablet {
@@ -93,6 +142,7 @@
 
 .itemIcon {
   svg {
+    display: block;
     margin: 0 auto;
     transition: color 0.15s ease;
   }
@@ -106,4 +156,29 @@
   margin: 0;
   max-width: 178px;
   text-align: center;
+
+  @media (max-width: 1199px) {
+    margin: 0 auto 70px;
+  }
+}
+
+.swiper > div.pagination {
+  width: 50%;
+  left: calc(50% - 50% / 2);
+}
+
+div[role='button'] {
+  top: auto;
+  bottom: -33px;
+  color: #a6abbd;
+  scale: 0.5;
+  padding: 30px 10% 30px 10%;
+}
+
+div.pagination > span.bullet {
+  background: #e7ebf0;
+}
+
+div.pagination > span.bulletActive {
+  background: #a6abbd;
 }

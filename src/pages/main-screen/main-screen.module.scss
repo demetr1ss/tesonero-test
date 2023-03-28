@@ -9,7 +9,9 @@
   flex-wrap: wrap;
   padding-bottom: 97px;
 
-  @media (max-width: 767px) {
+  @media (max-width: 1199px) {
+    flex-direction: column;
     padding: 0 16px;
+    align-items: center;
   }
 }

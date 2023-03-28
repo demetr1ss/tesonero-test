@@ -3,17 +3,37 @@
   box-sizing: border-box;
   padding-left: 89px;
   padding-right: 167px;
+
+  @media (max-width: 1199px) {
+    padding: 33px 0 29px;
+    width: 100%;
+    margin-bottom: 56px;
+  }
 }
 
 .title {
   composes: title from '../reviews/reviews.module.scss';
   padding-bottom: 16px;
+
+  @media (max-width: 1199px) {
+    padding: 0;
+    margin-bottom: 16px;
+    margin-top: 0;
+
+    br {
+      display: none;
+    }
+  }
 }
 
 .description {
   margin: 0;
   text-align: center;
   margin-bottom: 16px;
+
+  @media (max-width: 1199px) {
+    margin-bottom: 25px;
+  }
 }
 
 .questionsList {
@@ -24,11 +44,17 @@
 
 .questionsItem {
   position: relative;
-  padding: 18px 0 16px 64px;
+  padding: 18px 45px 16px 64px;
   border-bottom: 1px solid #e7ebf0;
 
   &:last-child {
     border-bottom: none;
+  }
+
+  @media (max-width: 1199px) {
+    padding-left: 0;
+    padding-bottom: 7px;
+    padding-top: 7px;
   }
 }
 
@@ -43,6 +69,11 @@
     margin-bottom: 16px;
   }
 
+  @media (max-width: 1440px) {
+    font-size: 16px;
+    line-height: 19px;
+  }
+
   &::before {
     position: absolute;
     content: '';
@@ -55,33 +86,36 @@
     background-repeat: no-repeat;
     background-position: center;
 
-    .stability & {
+    li[data-name='stability'] & {
       background-image: url('../../../public/img/stability-faq-icon.svg');
     }
 
-    .led & {
+    li[data-name='led'] & {
       background-image: url('../../../public/img/led-faq-icon.svg');
     }
 
-    .lights & {
+    li[data-name='lights'] & {
       background-image: url('../../../public/img/lights-faq-icon.svg');
     }
 
-    .splitter & {
+    li[data-name='splitter'] & {
       background-image: url('../../../public/img/splitter-faq-icon.svg');
     }
 
-    .power & {
+    li[data-name='power'] & {
       background-image: url('../../../public/img/power-faq-icon.svg');
     }
-  }
 
+    @media (max-width: 1199px) {
+      display: none;
+    }
+  }
 }
 
 .reply {
   display: none;
   margin: 0;
-  line-height: 18px;
+  line-height: 19px;
   transition: display 0.15s ease;
 
   .active & {
@@ -94,10 +128,11 @@
   content: '';
   width: 20px;
   height: 11px;
-  right: 0;
-  top: 30px;
+  right: -15px;
+  top: 17px;
   border: none;
-  padding: 0;
+  padding: 15px;
+  box-sizing: content-box;
   cursor: pointer;
   background-color: transparent;
   background-image: url('../../../public/img/faq-button-icon.svg');
@@ -112,5 +147,9 @@
   &:hover,
   &:focus-visible {
     opacity: 0.5;
+  }
+
+  @media (max-width: 1199px) {
+    top: 0;
   }
 }
